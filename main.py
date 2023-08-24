@@ -27,7 +27,10 @@ def main():
             create_group_exchange(channel, group_name)
             print(f"Grupo '{group_name}' criado.")
         elif choice == "2":
-            user_to_add = input("Digite o nome do usuário a ser adicionado ao grupo: ")
+            group_name = input(
+                "Digite o nome do grupo a ser adicionado o novo usuário: "
+            )
+            user_to_add = input("Digite o nome do usuário a ser adicionado: ")
             channel.queue_declare(queue=user_to_add)
             channel.queue_bind(exchange=group_name, queue=user_to_add)
             print(f"{user_to_add} adicionado ao grupo '{group_name}'.")
