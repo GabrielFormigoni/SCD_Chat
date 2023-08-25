@@ -1,4 +1,4 @@
-# Whatsapp usando RabbitMQ
+# Whatsapp via RabbitMQ
 
 Autores:
 - Gabriel Formigoni
